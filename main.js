@@ -22,7 +22,8 @@ const santasList = [
 function generateGoodList(list){
 const goodList = [];
 for(i=0; i< santasList.length; i++){
-    if(list[i].naughty === false && list[i].age < 16 && list[i].leftACookie === true){
+    let child = list[i]
+    if(child.naughty === false && child.age < 16 && child.leftACookie === true){
     goodList.push(list[i].childName);
 }
 }
