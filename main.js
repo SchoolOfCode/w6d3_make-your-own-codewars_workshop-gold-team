@@ -5,7 +5,7 @@ assemble the Nice list before tomorrow morning!
  Your task will be to return an array of all children who will receive a gift. The child will receive a gift if:
  *They have been nice AND
  *Left cookies for santa AND
- *Is under 16 years of age AND
+ *Is under 16 years of age
 
 Santa is picky about how his list looks - have the format EXACTLY as follows:
 Name: x. Gift: y.
@@ -27,15 +27,5 @@ export const santasList = [
 
 
 //Function
-export function generateGoodList(list){
-const goodList = [];
-for(let i=0; i< santasList.length; i++){
-    let child = list[i]
-    if(child.naughty === false && child.age < 16 && child.leftACookie === true){
-    goodList.push(`Name: ${child.childName}. Gift: ${child.expectedGift}.`);
+export function generateGoodList(santasList){
 }
-}
-console.log(goodList);
-return goodList;
-}
-
